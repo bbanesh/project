@@ -15,6 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh mvn sonar:sonar -Dsonar.host.url=http://54.174.45.44:9000 -Dsonar.login=4259e79186c9c80043c5515219225dd26eb4f21c
             }
         }
     }
